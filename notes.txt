@@ -1,0 +1,33 @@
+
+with python,
+
+
+try read from https://www.amazon.in/s?k=bags&crid=2M096C61O4MLT&qid=1653308124&sprefix=ba%2Caps%2C283&ref=sr_pg_{} url if status code is not 200
+update the page with 1 - 20 page values
+
+
+try find all
+div class="s-card-container s-overflow-hidden aok-relative puis-wide-grid-style puis-wide-grid-style-t3 puis-include-content-margin puis puis-v3b48cl1js792724v4d69zlbwph s-latency-cf-section s-card-border"
+except rerun
+for all the divs
+
+try find span class="a-size-medium a-color-base a-text-normal" and store it to products_name
+except products_name = " "
+
+try find span class="a-offscreen" and store it to products_price
+except products_price = " "
+
+try find span class="a-size-base puis-bold-weight-text" and store it to products_rating
+except products_rating = " "
+
+try find span class="a-size-base s-underline-text" and store it to products_reviews
+except products_reviews = " "
+
+try find a class="a-link-normal s-no-outline" and store it to products_url
+except products_url = " "
+
+try find img class="s-image"  and store it to products_image
+except products_image = " "
+
+
+open a csv file and write product_name, products_price, products_rating, products_reviews, products_url, products_image
